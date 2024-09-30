@@ -16,12 +16,17 @@ struct ContentView: View {
     @State private var userGuess: Int?
     @State private var showResult = false
     @State private var isCorrect = false
+    @State private var gameState: GameState = .ready
+
+    enum GameState {
+        case ready, guessing, result
+    }
 
     var body: some View {
         NavigationView {
             VStack {
                 // Dice image
-                Image(systemName: "die.face.\(currentDice)")
+                Image(systemName: diceImageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
@@ -31,7 +36,7 @@ struct ContentView: View {
                 HStack {
                     ForEach(1...6, id: \.self) { number in
                         Button(action: {
-                            userGuess = number
+                            makeGuess(number)
                         }) {
                             Image(systemName: "die.face.\(number)")
                                 .resizable()
@@ -39,15 +44,15 @@ struct ContentView: View {
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(userGuess == number ? .blue : .gray)
                         }
+                        .disabled(gameState != .guessing)
                     }
                 }
                 .padding()
                 
                 // Roll button
-                Button("Roll") {
+                Button(rollButtonText) {
                     rollDice()
                 }
-                .disabled(userGuess == nil)
                 .padding()
                 
                 // Result display
@@ -68,19 +73,53 @@ struct ContentView: View {
         }
     }
 
+    private var diceImageName: String {
+        switch gameState {
+        case .ready:
+            return "die.face.6"
+        case .guessing:
+            return "die.face.blank"
+        case .result:
+            return "die.face.\(currentDice)"
+        }
+    }
+
+    private var rollButtonText: String {
+        switch gameState {
+        case .ready:
+            return "Roll Dice"
+        case .guessing:
+            return "Reveal"
+        case .result:
+            return "Roll Again"
+        }
+    }
+
     private func rollDice() {
-        guard let userGuess = userGuess else { return }
-        
-        currentDice = Int.random(in: 1...6)
-        isCorrect = userGuess == currentDice
-        showResult = true
+        switch gameState {
+        case .ready:
+            currentDice = Int.random(in: 1...6)
+            gameState = .guessing
+            showResult = false
+            userGuess = nil
+        case .guessing:
+            gameState = .result
+            showResult = true
+        case .result:
+            gameState = .ready
+        }
+    }
+
+    private func makeGuess(_ guess: Int) {
+        userGuess = guess
+        isCorrect = guess == currentDice
         
         // Save the guess
-        let newGuess = Guess(userGuess: userGuess, actualRoll: currentDice, timestamp: Date())
+        let newGuess = Guess(userGuess: guess, actualRoll: currentDice, timestamp: Date())
         modelContext.insert(newGuess)
         
-        // Reset for next round
-        self.userGuess = nil
+        gameState = .result
+        showResult = true
     }
 }
 
