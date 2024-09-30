@@ -87,7 +87,22 @@ struct ContentView: View {
                     .padding()
                 }
                 .navigationTitle("Dice Prophet")
-                
+                .padding(.top, 20) // Add some vertical space above the title
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Dice Prophet")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, minHeight: 60) // Increased height
+                            .padding()
+                            .background(
+                                LinearGradient(gradient: Gradient(colors: [.blue, .purple, .pink]), startPoint: .leading, endPoint: .trailing)
+                            )
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+                .navigationBarTitleDisplayMode(.inline)
                 // Info button
                 VStack {
                     Spacer()
