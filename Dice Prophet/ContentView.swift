@@ -16,10 +16,10 @@ struct ContentView: View {
     @State private var userGuess: Int?
     @State private var showResult = false
     @State private var isCorrect = false
-    @State private var gameState: GameState = .ready
+    @State private var gameState: GameState = .guessing
 
     enum GameState {
-        case ready, guessing, result
+        case guessing, result
     }
 
     var body: some View {
@@ -50,9 +50,10 @@ struct ContentView: View {
                 .padding()
                 
                 // Roll button
-                Button(rollButtonText) {
+                Button("Roll Again") {
                     rollDice()
                 }
+                .disabled(gameState == .guessing)
                 .padding()
                 
                 // Result display
@@ -75,8 +76,6 @@ struct ContentView: View {
 
     private var diceImageName: String {
         switch gameState {
-        case .ready:
-            return "die.face.6"
         case .guessing:
             return "die.face.blank"
         case .result:
@@ -84,30 +83,11 @@ struct ContentView: View {
         }
     }
 
-    private var rollButtonText: String {
-        switch gameState {
-        case .ready:
-            return "Roll Dice"
-        case .guessing:
-            return "Reveal"
-        case .result:
-            return "Roll Again"
-        }
-    }
-
     private func rollDice() {
-        switch gameState {
-        case .ready:
-            currentDice = Int.random(in: 1...6)
-            gameState = .guessing
-            showResult = false
-            userGuess = nil
-        case .guessing:
-            gameState = .result
-            showResult = true
-        case .result:
-            gameState = .ready
-        }
+        currentDice = Int.random(in: 1...6)
+        gameState = .guessing
+        showResult = false
+        userGuess = nil
     }
 
     private func makeGuess(_ guess: Int) {
