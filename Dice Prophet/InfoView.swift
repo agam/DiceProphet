@@ -6,11 +6,10 @@ struct CreatorInfoView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Image(systemName: "person.circle")
+                Image("DiceLogo") // Replace with your actual image name
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.blue)
                 
                 Text("Dice Prophet")
                     .font(.title)
