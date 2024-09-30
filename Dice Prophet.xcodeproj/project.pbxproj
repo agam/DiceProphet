@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		C03ADAEF2CAA259200BE46AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C03ADAD22CAA259000BE46AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03ADAD92CAA259000BE46AD;
+			remoteInfo = "Dice Prophet";
+		};
+		C03ADAF92CAA259200BE46AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C03ADAD22CAA259000BE46AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03ADAD92CAA259000BE46AD;
+			remoteInfo = "Dice Prophet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C03ADADA2CAA259000BE46AD /* Dice Prophet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Prophet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03ADAEE2CAA259200BE46AD /* Dice ProphetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dice ProphetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03ADAF82CAA259200BE46AD /* Dice ProphetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dice ProphetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C03ADB002CAA259200BE46AD /* Exceptions for "Dice Prophet" folder in "Dice Prophet" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C03ADAD92CAA259000BE46AD /* Dice Prophet */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C03ADADC2CAA259000BE46AD /* Dice Prophet */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C03ADB002CAA259200BE46AD /* Exceptions for "Dice Prophet" folder in "Dice Prophet" target */,
+			);
+			path = "Dice Prophet";
+			sourceTree = "<group>";
+		};
+		C03ADAF12CAA259200BE46AD /* Dice ProphetTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Dice ProphetTests";
+			sourceTree = "<group>";
+		};
+		C03ADAFB2CAA259200BE46AD /* Dice ProphetUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Dice ProphetUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C03ADAD72CAA259000BE46AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ADAEB2CAA259200BE46AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ADAF52CAA259200BE46AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C03ADAD12CAA259000BE46AD = {
+			isa = PBXGroup;
+			children = (
+				C03ADADC2CAA259000BE46AD /* Dice Prophet */,
+				C03ADAF12CAA259200BE46AD /* Dice ProphetTests */,
+				C03ADAFB2CAA259200BE46AD /* Dice ProphetUITests */,
+				C03ADADB2CAA259000BE46AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C03ADADB2CAA259000BE46AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C03ADADA2CAA259000BE46AD /* Dice Prophet.app */,
+				C03ADAEE2CAA259200BE46AD /* Dice ProphetTests.xctest */,
+				C03ADAF82CAA259200BE46AD /* Dice ProphetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C03ADAD92CAA259000BE46AD /* Dice Prophet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C03ADB012CAA259200BE46AD /* Build configuration list for PBXNativeTarget "Dice Prophet" */;
+			buildPhases = (
+				C03ADAD62CAA259000BE46AD /* Sources */,
+				C03ADAD72CAA259000BE46AD /* Frameworks */,
+				C03ADAD82CAA259000BE46AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C03ADADC2CAA259000BE46AD /* Dice Prophet */,
+			);
+			name = "Dice Prophet";
+			packageProductDependencies = (
+			);
+			productName = "Dice Prophet";
+			productReference = C03ADADA2CAA259000BE46AD /* Dice Prophet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C03ADAED2CAA259200BE46AD /* Dice ProphetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C03ADB062CAA259200BE46AD /* Build configuration list for PBXNativeTarget "Dice ProphetTests" */;
+			buildPhases = (
+				C03ADAEA2CAA259200BE46AD /* Sources */,
+				C03ADAEB2CAA259200BE46AD /* Frameworks */,
+				C03ADAEC2CAA259200BE46AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C03ADAF02CAA259200BE46AD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C03ADAF12CAA259200BE46AD /* Dice ProphetTests */,
+			);
+			name = "Dice ProphetTests";
+			packageProductDependencies = (
+			);
+			productName = "Dice ProphetTests";
+			productReference = C03ADAEE2CAA259200BE46AD /* Dice ProphetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C03ADAF72CAA259200BE46AD /* Dice ProphetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C03ADB092CAA259200BE46AD /* Build configuration list for PBXNativeTarget "Dice ProphetUITests" */;
+			buildPhases = (
+				C03ADAF42CAA259200BE46AD /* Sources */,
+				C03ADAF52CAA259200BE46AD /* Frameworks */,
+				C03ADAF62CAA259200BE46AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C03ADAFA2CAA259200BE46AD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C03ADAFB2CAA259200BE46AD /* Dice ProphetUITests */,
+			);
+			name = "Dice ProphetUITests";
+			packageProductDependencies = (
+			);
+			productName = "Dice ProphetUITests";
+			productReference = C03ADAF82CAA259200BE46AD /* Dice ProphetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C03ADAD22CAA259000BE46AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					C03ADAD92CAA259000BE46AD = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					C03ADAED2CAA259200BE46AD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = C03ADAD92CAA259000BE46AD;
+					};
+					C03ADAF72CAA259200BE46AD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = C03ADAD92CAA259000BE46AD;
+					};
+				};
+			};
+			buildConfigurationList = C03ADAD52CAA259000BE46AD /* Build configuration list for PBXProject "Dice Prophet" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C03ADAD12CAA259000BE46AD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C03ADADB2CAA259000BE46AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C03ADAD92CAA259000BE46AD /* Dice Prophet */,
+				C03ADAED2CAA259200BE46AD /* Dice ProphetTests */,
+				C03ADAF72CAA259200BE46AD /* Dice ProphetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C03ADAD82CAA259000BE46AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ADAEC2CAA259200BE46AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ADAF62CAA259200BE46AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C03ADAD62CAA259000BE46AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ADAEA2CAA259200BE46AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ADAF42CAA259200BE46AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C03ADAF02CAA259200BE46AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C03ADAD92CAA259000BE46AD /* Dice Prophet */;
+			targetProxy = C03ADAEF2CAA259200BE46AD /* PBXContainerItemProxy */;
+		};
+		C03ADAFA2CAA259200BE46AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C03ADAD92CAA259000BE46AD /* Dice Prophet */;
+			targetProxy = C03ADAF92CAA259200BE46AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C03ADB022CAA259200BE46AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Dice Prophet/Dice_Prophet.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Dice Prophet/Preview Content\"";
+				DEVELOPMENT_TEAM = GC6H6C2X6M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dice Prophet/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.abacusnoir.Dice-Prophet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C03ADB032CAA259200BE46AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Dice Prophet/Dice_Prophet.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Dice Prophet/Preview Content\"";
+				DEVELOPMENT_TEAM = GC6H6C2X6M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dice Prophet/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.abacusnoir.Dice-Prophet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C03ADB042CAA259200BE46AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C03ADB052CAA259200BE46AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C03ADB072CAA259200BE46AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GC6H6C2X6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.abacusnoir.Dice-ProphetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dice Prophet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dice Prophet";
+			};
+			name = Debug;
+		};
+		C03ADB082CAA259200BE46AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GC6H6C2X6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.abacusnoir.Dice-ProphetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dice Prophet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dice Prophet";
+			};
+			name = Release;
+		};
+		C03ADB0A2CAA259200BE46AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GC6H6C2X6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.abacusnoir.Dice-ProphetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dice Prophet";
+			};
+			name = Debug;
+		};
+		C03ADB0B2CAA259200BE46AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GC6H6C2X6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.abacusnoir.Dice-ProphetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dice Prophet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C03ADAD52CAA259000BE46AD /* Build configuration list for PBXProject "Dice Prophet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03ADB042CAA259200BE46AD /* Debug */,
+				C03ADB052CAA259200BE46AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C03ADB012CAA259200BE46AD /* Build configuration list for PBXNativeTarget "Dice Prophet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03ADB022CAA259200BE46AD /* Debug */,
+				C03ADB032CAA259200BE46AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C03ADB062CAA259200BE46AD /* Build configuration list for PBXNativeTarget "Dice ProphetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03ADB072CAA259200BE46AD /* Debug */,
+				C03ADB082CAA259200BE46AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C03ADB092CAA259200BE46AD /* Build configuration list for PBXNativeTarget "Dice ProphetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C03ADB0A2CAA259200BE46AD /* Debug */,
+				C03ADB0B2CAA259200BE46AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C03ADAD22CAA259000BE46AD /* Project object */;
+}
