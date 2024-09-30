@@ -26,13 +26,14 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 30) {
+                Spacer()
+                
                 // Dice image
                 Image(systemName: diceImageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
-                    .padding()
+                    .frame(width: 120, height: 120)
                 
                 // User guess buttons in a 2x3 grid
                 LazyVGrid(columns: columns, spacing: 20) {
@@ -49,22 +50,33 @@ struct ContentView: View {
                         .disabled(gameState != .guessing)
                     }
                 }
-                .padding()
+                .padding(.horizontal)
                 
-                // Roll button
-                Button("Roll Again") {
-                    rollDice()
-                }
-                .disabled(gameState == .guessing)
-                .padding()
+                Spacer()
                 
                 // Result display
                 if showResult {
                     Text(isCorrect ? "Correct!" : "Incorrect!")
-                        .font(.headline)
+                        .font(.title2)
+                        .fontWeight(.bold)
                         .foregroundColor(isCorrect ? .green : .red)
-                        .padding()
                 }
+                
+                // Roll Again button
+                Button(action: {
+                    rollDice()
+                }) {
+                    Image(systemName: "arrow.clockwise.circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 80, height: 80)
+                        .foregroundColor(.blue)
+                        .background(Circle().fill(Color.white))
+                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 0, y: 5)
+                }
+                .disabled(gameState == .guessing)
+                
+                Spacer()
                 
                 // History view
                 NavigationLink("View History") {
