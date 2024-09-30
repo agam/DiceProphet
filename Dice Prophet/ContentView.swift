@@ -22,6 +22,8 @@ struct ContentView: View {
         case guessing, result
     }
 
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
+
     var body: some View {
         NavigationView {
             VStack {
@@ -32,8 +34,8 @@ struct ContentView: View {
                     .frame(width: 100, height: 100)
                     .padding()
                 
-                // User guess buttons
-                HStack {
+                // User guess buttons in a 2x3 grid
+                LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(1...6, id: \.self) { number in
                         Button(action: {
                             makeGuess(number)
@@ -41,7 +43,7 @@ struct ContentView: View {
                             Image(systemName: "die.face.\(number)")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 60, height: 60)
                                 .foregroundColor(userGuess == number ? .blue : .gray)
                         }
                         .disabled(gameState != .guessing)
