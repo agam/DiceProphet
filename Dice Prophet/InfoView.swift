@@ -16,7 +16,7 @@ struct CreatorInfoView: View {
                     .font(.title)
                     .fontWeight(.bold)
                 
-                Text("Created by Agam Brahma")
+                Text("AbacusNoir Apps")
                     .font(.headline)
                 
                 Text("Version 1.0")
