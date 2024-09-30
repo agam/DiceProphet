@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var showResult = false
     @State private var isCorrect = false
     @State private var gameState: GameState = .guessing
+    @State private var showingCreatorInfo = false
 
     enum GameState {
         case guessing, result
@@ -26,65 +27,86 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
-                Spacer()
-                
-                // Dice image
-                Image(systemName: diceImageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 120, height: 120)
-                
-                // User guess buttons in a 2x3 grid
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(1...6, id: \.self) { number in
-                        Button(action: {
-                            makeGuess(number)
-                        }) {
-                            Image(systemName: "die.face.\(number)")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 60, height: 60)
-                                .foregroundColor(userGuess == number ? .blue : .gray)
-                        }
-                        .disabled(gameState != .guessing)
-                    }
-                }
-                .padding(.horizontal)
-                
-                Spacer()
-                
-                // Result display
-                if showResult {
-                    Text(isCorrect ? "Correct!" : "Incorrect!")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(isCorrect ? .green : .red)
-                }
-                
-                // Roll Again button
-                Button(action: {
-                    rollDice()
-                }) {
-                    Image(systemName: "arrow.clockwise.circle.fill")
+            ZStack {
+                VStack(spacing: 30) {
+                    Spacer()
+                    
+                    // Dice image
+                    Image(systemName: diceImageName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 80, height: 80)
-                        .foregroundColor(.blue)
-                        .background(Circle().fill(Color.white))
-                        .shadow(color: .gray.opacity(0.3), radius: 10, x: 0, y: 5)
+                        .frame(width: 120, height: 120)
+                    
+                    // User guess buttons in a 2x3 grid
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(1...6, id: \.self) { number in
+                            Button(action: {
+                                makeGuess(number)
+                            }) {
+                                Image(systemName: "die.face.\(number)")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 60, height: 60)
+                                    .foregroundColor(userGuess == number ? .blue : .gray)
+                            }
+                            .disabled(gameState != .guessing)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    Spacer()
+                    
+                    // Result display
+                    if showResult {
+                        Text(isCorrect ? "Correct!" : "Incorrect!")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(isCorrect ? .green : .red)
+                    }
+                    
+                    // Roll Again button
+                    Button(action: {
+                        rollDice()
+                    }) {
+                        Image(systemName: "arrow.clockwise.circle.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(.blue)
+                            .background(Circle().fill(Color.white))
+                            .shadow(color: .gray.opacity(0.3), radius: 10, x: 0, y: 5)
+                    }
+                    .disabled(gameState == .guessing)
+                    
+                    Spacer()
+                    
+                    // History view
+                    NavigationLink("View History") {
+                        HistoryView(guesses: guesses)
+                    }
+                    .padding()
                 }
-                .disabled(gameState == .guessing)
+                .navigationTitle("Dice Prophet")
                 
-                Spacer()
-                
-                // History view
-                NavigationLink("View History") {
-                    HistoryView(guesses: guesses)
+                // Info button
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            showingCreatorInfo = true
+                        }) {
+                            Image(systemName: "info.circle")
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                        }
+                        .padding()
+                    }
                 }
-                .padding()
             }
-            .navigationTitle("Dice Prophet")
+        }
+        .sheet(isPresented: $showingCreatorInfo) {
+            CreatorInfoView()
         }
     }
 
