@@ -107,15 +107,65 @@ struct HistoryView: View {
     let guesses: [Guess]
     
     var body: some View {
-        List(guesses) { guess in
-            HStack {
-                Text("Guessed: \(guess.userGuess)")
-                Text("Actual: \(guess.actualRoll)")
-                Spacer()
-                Text(guess.timestamp, format: .dateTime)
+        List {
+            ForEach(groupedGuesses, id: \.date) { dayGroup in
+                Section(header: Text(dayGroup.date, style: .date)) {
+                    ForEach(dayGroup.hourGroups, id: \.hour) { hourGroup in
+                        HourGroupView(hourGroup: hourGroup)
+                    }
+                }
             }
         }
         .navigationTitle("Guess History")
+    }
+    
+    private var groupedGuesses: [DayGroup] {
+        let sortedGuesses = guesses.sorted { $0.timestamp > $1.timestamp }
+        let groupedByDay = Dictionary(grouping: sortedGuesses) { Calendar.current.startOfDay(for: $0.timestamp) }
+        
+        return groupedByDay.map { (day, dayGuesses) in
+            let hourGroups = Dictionary(grouping: dayGuesses) { Calendar.current.component(.hour, from: $0.timestamp) }
+                .map { (hour, hourGuesses) in
+                    HourGroup(hour: hour, guesses: hourGuesses)
+                }
+                .sorted { $0.hour > $1.hour }
+            
+            return DayGroup(date: day, hourGroups: hourGroups)
+        }
+        .sorted { $0.date > $1.date }
+    }
+}
+
+struct HourGroupView: View {
+    let hourGroup: HourGroup
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("\(hourGroup.hour):00 - \(hourGroup.hour):59")
+                .font(.headline)
+            Text("Guesses: \(hourGroup.guesses.count)")
+            Text("Correct: \(hourGroup.correctGuesses)")
+            Text("Hit Rate: \(hourGroup.hitPercentage, specifier: "%.1f")%")
+        }
+    }
+}
+
+struct DayGroup {
+    let date: Date
+    let hourGroups: [HourGroup]
+}
+
+struct HourGroup {
+    let hour: Int
+    let guesses: [Guess]
+    
+    var correctGuesses: Int {
+        guesses.filter { $0.userGuess == $0.actualRoll }.count
+    }
+    
+    var hitPercentage: Double {
+        guard !guesses.isEmpty else { return 0 }
+        return Double(correctGuesses) / Double(guesses.count) * 100
     }
 }
 
